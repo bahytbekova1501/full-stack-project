@@ -10,7 +10,7 @@ import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 // import { ModelBody2 } from "../ModelBody2";
 // import { ModelBody3 } from "../ModelBody3";
 // import { ModelBody } from "../ModelBody";
-import { Futbolka } from "../Futbolka";
+import { Futbolka } from "../components/models/Futbolka";
 function Controls() {
   const { camera, gl } = useThree();
   return <OrbitControls args={[camera, gl.domElement]} />;

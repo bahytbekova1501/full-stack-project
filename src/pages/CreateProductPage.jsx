@@ -4,10 +4,10 @@ import { PerspectiveCamera } from "@react-three/drei";
 // import { Body2 } from "../Body2";
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Futbolka } from "../Futbolka";
-import { BodyModel } from "../BodyModel";
+import { Futbolka } from "../components/models/Futbolka";
+import { BodyModel } from "../components/models/BodyModel";
 import { Body } from "../Body";
-import { Tolstovka } from "../Tolstovka";
+import { Tolstovka } from "../components/models/Tolstovka";
 import { Button } from "@mui/material";
 import { useState } from "react";
 
