@@ -1,0 +1,11 @@
+Model Information:
+* title:	SteelLady
+* source:	https://sketchfab.com/3d-models/steellady-727fd501551f4490a8b06b0412dc8942
+* author:	Makord (https://sketchfab.com/stalkerboy347)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SteelLady" (https://sketchfab.com/3d-models/steellady-727fd501551f4490a8b06b0412dc8942) by Makord (https://sketchfab.com/stalkerboy347) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

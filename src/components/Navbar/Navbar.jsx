@@ -12,14 +12,14 @@ function Navbar() {
 
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              Главная
-            </a>
+            <Button component={Link} to="/">
+              home
+            </Button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              О нас
-            </a>
+            <Button component={Link} to="/create">
+              create
+            </Button>
           </li>
           <li class="nav-item">
             <Button component={Link} to="/add">
