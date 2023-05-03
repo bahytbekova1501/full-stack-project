@@ -46,8 +46,7 @@
 //           <BodyModel />
 //           {/* <Body2 /> */}
 //         </Canvas>
-//       </div>
-//       {/* <div>
+//
 //         <Button onClick={() => handleButtonClick(<Futbolka />)}>
 //           Футболка
 //         </Button>
