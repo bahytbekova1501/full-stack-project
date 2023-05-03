@@ -26,6 +26,11 @@ function Navbar() {
               add
             </Button>
           </li>
+          <li class="nav-item">
+            <Button component={Link} to="/custom">
+              custom
+            </Button>
+          </li>
         </ul>
       </nav>
     </div>

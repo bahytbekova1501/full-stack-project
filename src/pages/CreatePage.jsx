@@ -3,6 +3,10 @@ import React from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import Experience from "./components/Experience";
+// import Configurator from "./components/Configurator";
+// import { CustomizationProvider } from "./contexts/Customization";
 // import { Body } from "../Body";
 // import { OBJLoader } from "three-obj-loader";
 // import { Body4 } from "../Body4";
@@ -17,6 +21,7 @@ function Controls() {
 }
 // const body = { Body };
 // console.log(body);
+
 function CreatePage() {
   return (
     <div>
@@ -24,8 +29,7 @@ function CreatePage() {
         <Canvas
           dpr={[1, 2]}
           shadows
-          camera={{ fav: 70, position: [0, 0.1, 15] }}
-        >
+          camera={{ fav: 70, position: [0, 0.1, 15] }}>
           <ambientLight />
           <pointLight position={[2, 1, 4]} intensity={1} />
           <pointLight position={[-3, -3, -2]} />
@@ -40,6 +44,16 @@ function CreatePage() {
         </Canvas>
       </div>
     </div>
+    // <CustomizationProvider>
+    //   <div className="App">
+    //     <Canvas dpr={[1, 2]}>
+    //       <color attach="background" args={["#213547"]} />
+    //       <fog attach="fog" args={["#213547", 10, 20]} />
+    //       <Experience />
+    //     </Canvas>
+    //     <Configurator />
+    //   </div>
+    // </CustomizationProvider>
   );
 }
 

@@ -32,8 +32,7 @@ function CreateProductPage() {
           // style={{ background: "black" }}
           dpr={[1, 2]}
           shadows
-          camera={{ fav: 45, position: [0, 0.1, 15] }}
-        >
+          camera={{ fav: 45, position: [0, 0.1, 15] }}>
           {/* <MyCamera /> */}
           <ambientLight />
           <pointLight position={[2, 1, 2]} intensity={1} />
