@@ -1,9 +1,11 @@
-import MainRoutes from "./routes/MainRoutes";
+import React from "react";
+import MainRoute from "./routes/MainRoute";
+import "./style/App.css";
 
 function App() {
   return (
-    <div>
-      <MainRoutes />
+    <div className="App">
+      <MainRoute />
     </div>
   );
 }

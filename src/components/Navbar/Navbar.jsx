@@ -1,39 +1,34 @@
-import { Button } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
-      <nav class="navbar">
-        <Button component={Link} to="/">
-          Логотип
-        </Button>
-
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <Button component={Link} to="/">
-              home
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button component={Link} to="/create">
-              create
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button component={Link} to="/add">
-              add
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button component={Link} to="/custom">
-              custom
-            </Button>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <header className="header">
+      <div className="container">
+        <nav className="header__nav">
+          <div>
+            <h2 className="header__logo">logo</h2>
+          </div>
+          <ul className="header__list">
+            <li className="header__item">
+              <a href="#">About</a>
+            </li>
+            <li className="header__item">
+              <a href="#">Menu</a>
+            </li>
+            <li className="header__item">
+              <a href="#">Price</a>
+            </li>
+            <li className="header__item">
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+          <ul className="header__login">
+            <li>SIGN IN</li>
+            <li>SIGN UP</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 }
 

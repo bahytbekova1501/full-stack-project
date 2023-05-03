@@ -1,8 +1,13 @@
 import React from "react";
-import Model from "../components/Model";
 
 function HomePage() {
-  return <div></div>;
+  return (
+    <main className="main">
+      <div className="container">
+        <h1 className="main__title">Welcome to Our Website</h1>
+      </div>
+    </main>
+  );
 }
 
 export default HomePage;
