@@ -4,31 +4,27 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
-      <nav class="navbar">
-        <Button component={Link} to="/">
-          Логотип
-        </Button>
-
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <Button component={Link} to="/">
-              home
+    <header className="header">
+      <div className="container">
+        <nav className="header__nav">
+          <div>
+            <h2 className="header__logo">logo</h2>
+          </div>
+          <ul className="header__list">
+            <Button className="header__item">About</Button>
+            <Button className="header__item">Menu</Button>
+            <Button component={Link} to="/create" className="header__item">
+              Create
             </Button>
-          </li>
-          <li class="nav-item">
-            <Button component={Link} to="/create">
-              create
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button component={Link} to="/add">
-              add
-            </Button>
-          </li>
-        </ul>
-      </nav>
-    </div>
+            <Button className="header__item">ADD</Button>
+          </ul>
+          <ul className="header__login">
+            <li>SIGN IN</li>
+            <li>SIGN UP</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 }
 
