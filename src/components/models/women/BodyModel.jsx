@@ -8,13 +8,13 @@ import { useGLTF } from "@react-three/drei";
 
 export function BodyModel(props) {
   const { nodes, materials } = useGLTF("/modelBody/Body.gltf");
+
   return (
     <group {...props} dispose={null}>
       <group
         position={[0, -11, -0.08]}
         rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
-      >
+        scale={0.01}>
         <mesh
           geometry={nodes["avatar-women001"].geometry}
           material={materials["dummySG1SG1.001"]}

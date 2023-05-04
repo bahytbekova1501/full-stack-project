@@ -15,6 +15,8 @@ import { Rukovasman2 } from "../components/models/women/Rukovasman2";
 import { Rukovakorotkienew } from "../components/models/women/Rukovakorotkienew";
 import { Rukovabezmanjet } from "../components/models/women/Rukovabezmanjet";
 import { MenModel } from "../components/models/men/MenModel";
+import Configurator from "./Configurator";
+import { CustomizationProvider } from "context/Customization";
 
 function Controls() {
   const { camera, gl } = useThree();
@@ -84,71 +86,80 @@ function Models3D() {
 
   // function hendle
   return (
-    <div style={{ display: "flex", flexDirection: "row", marginTop: "100px" }}>
+    <CustomizationProvider>
       <div
-        style={{ width: "650px", height: "700px", border: "solid 3px black" }}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          marginTop: "100px",
+        }}
       >
-        <Canvas
-          dpr={[1, 2]}
-          shadows
-          camera={{ fav: 45, position: [0, 0.1, 15] }}
-        >
-          <ambientLight />
-          <pointLight position={[2, 1, 2]} intensity={1} />
-          <pointLight position={[-3, -3, -2]} />
-          <Controls />
+        <div style={{ width: "650px", height: "700px" }}>
+          <Canvas
+            dpr={[1, 2]}
+            shadows
+            camera={{ fav: 45, position: [0, 0.1, 15] }}
+          >
+            <ambientLight />
+            <pointLight position={[2, 1, 2]} intensity={1} />
+            <pointLight position={[-3, -3, -2]} />
+            <Controls />
 
-          {chest}
-          {rukova}
-          {clothing}
-          {bottomPart}
+            {chest}
+            {rukova}
+            {clothing}
+            {bottomPart}
 
-          {gender}
-        </Canvas>
-      </div>
-
-      <Button onClick={() => handleGenderSelect(<BodyModel />)}>Женщина</Button>
-      <Button onClick={() => handleGenderSelect(<MenModel />)}>Мужчина </Button>
-
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div className="top">
-          <Button onClick={() => handleButtonClick(<Futbolka />)}>
-            Футболка
-          </Button>
-          <Button onClick={() => handleButtonClick(<Tolstovka />)}>
-            Толстовка
-          </Button>
-        </div>
-        <div className="top-create">
-          <div className="top-create-chest">
-            <Button onClick={() => handleChest(<Maika1 />)}>maika1</Button>
-          </div>
-          <div className="top-create-rukova">
-            <Button onClick={() => handleRukova(<Rukovakorotkienew />)}>
-              короткие
-            </Button>
-            <Button onClick={() => handleRukova(<Rukovabezmanjet />)}>
-              rucova черные
-            </Button>
-            <Button onClick={() => handleRukova(<Rukovasman2 />)}>
-              rucova черные с манжетом 2
-            </Button>
-          </div>
+            {gender}
+          </Canvas>
+          <Configurator />
         </div>
 
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div>Выберите пол</div>
+          <Button onClick={() => handleGenderSelect(<BodyModel />)}>
+            Женщина
+          </Button>
+          <Button onClick={() => handleGenderSelect(<MenModel />)}>
+            Мужчина{" "}
+          </Button>
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div>Верхняя часть</div>
+          <div className="top">
+            <Button onClick={() => handleButtonClick(<Futbolka />)}>
+              Футболка
+            </Button>
+            <Button onClick={() => handleButtonClick(<Tolstovka />)}>
+              Толстовка
+            </Button>
+          </div>
+          <div className="top-create">
+            <div className="top-create-chest">
+              <Button onClick={() => handleChest(<Maika1 />)}>maika1</Button>
+            </div>
+            <div className="top-create-rukova">
+              <Button onClick={() => handleRukova(<Rukovakorotkienew />)}>
+                короткие
+              </Button>
+              <Button onClick={() => handleRukova(<Rukovabezmanjet />)}>
+                рукова черные
+              </Button>
+              <Button onClick={() => handleRukova(<Rukovasman2 />)}>
+                рукава черные с манжетом
+              </Button>
+            </div>
+          </div>
+        </div>
         <div className="bottom">
           <Button onClick={() => handleBottomPart(<Shtany />)}>shtany</Button>
         </div>
-
-        {/* {components.map(item)}
-        <Button onClick={handleButtonClick}>
-          {clothing ? "Hide Futbolka" : "Show Futbolka"}
-        </Button> */}
-        {/* <Button onClick={() => setClothing(false)}>BodyModel</Button>
-        <Button onClick={() => setClothing(true)}>Futbolka</Button>
-        <Button onClick={() => setClothing(true)}>Tolstovka</Button> */}
+        <div>
+          <Configurator />
+        </div>
       </div>
-    </div>
+    </CustomizationProvider>
   );
 }
 

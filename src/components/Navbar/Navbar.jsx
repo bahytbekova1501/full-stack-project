@@ -1,7 +1,7 @@
-import { Button } from "@mui/material";
 import React from "react";
+import "./Navbar.css";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
 function Navbar() {
   return (
     <header className="header">
@@ -10,14 +10,14 @@ function Navbar() {
           <div>
             <h2 className="header__logo">logo</h2>
           </div>
-          <ul className="header__list">
-            <Button className="header__item">About</Button>
-            <Button className="header__item">Menu</Button>
-            <Button component={Link} to="/create" className="header__item">
-              Create
+          <div className="header__list">
+            <Button className="header__item">hello</Button>
+            <Button className="header__item">hello</Button>
+            <Button component={Link} to="create" className="header__item">
+              craete
             </Button>
-            <Button className="header__item">ADD</Button>
-          </ul>
+            <Button className="header__item">hello</Button>hello
+          </div>
           <ul className="header__login">
             <li>SIGN IN</li>
             <li>SIGN UP</li>
