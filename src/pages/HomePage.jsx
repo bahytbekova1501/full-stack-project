@@ -5,6 +5,7 @@ function HomePage() {
     <main className="main">
       <div className="container">
         <h1 className="main__title">Welcome to Our Website</h1>
+        <h1>test</h1>
       </div>
     </main>
   );
