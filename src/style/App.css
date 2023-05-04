@@ -18,11 +18,12 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
 }
 .main {
+  background-image: url("https://picsum.photos/1200/800");
   background-image: url("https://picsum.photos/1200/800");
   background-size: cover;
   background-position: center;
@@ -36,6 +37,8 @@
   font-size: 48px;
   color: #fff;
   text-align: center;
+  text-shadow: 2px 2px;
+  background-image: url("https://picsum.photos/1200/800");
   text-shadow: 2px 2px;
   background-image: url("https://picsum.photos/1200/800");
   background-size: cover;

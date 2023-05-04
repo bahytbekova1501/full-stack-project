@@ -8,7 +8,9 @@ export const useScroll = (thresh = 0.1) => {
   useEffect(() => {
     if (view) {
       controls.start("show");
+      controls.start("show");
     } else {
+      controls.start("hidden");
       controls.start("hidden");
     }
   }, [view]);
