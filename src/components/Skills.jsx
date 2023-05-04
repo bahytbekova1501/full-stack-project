@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import Title from './Title';
+import Title from "./Title";
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
-import { skillsBarAnimation } from "animation";
+import { skillsBarAnimation } from "../animation";
 
 function Skills() {
   const [element, controls] = useScroll();
@@ -38,46 +38,51 @@ function Skills() {
       </div>
       <div className="skills">
         <div className="skills__bars">
-          {
-            skillsData.map(({ name, amount }) => {
-              return (
-                <motion.div className="skills__bars__bar" key={name}
+          {skillsData.map(({ name, amount }) => {
+            return (
+              <motion.div
+                className="skills__bars__bar"
+                key={name}
                 variants={skillsBarAnimation}
                 animate={controls}
                 transition={{
                   delay: 0.03,
                   type: "tween",
                   duration: 0.8,
-                }}
-                >
-                  <div className="container">
-                    <progress value={amount} max="100" />
-                    <span>{name}</span>
-                  </div>
-                  <h3>{amount}%</h3>
-                </motion.div>
-              );
-            })
-          }
+                }}>
+                <div className="container">
+                  <progress value={amount} max="100" />
+                  <span>{name}</span>
+                </div>
+                <h3>{amount}%</h3>
+              </motion.div>
+            );
+          })}
         </div>
         <div className="skills__content">
           <p className="title">
-          Хотите стать успешным косметологом и предоставлять широкий спектр услуг и товаров для красоты? Тогда 3D-программное обеспечение для моделирования 3D-дизайна может помочь вам в этом!
+            Хотите стать успешным косметологом и предоставлять широкий спектр
+            услуг и товаров для красоты? Тогда 3D-программное обеспечение для
+            моделирования 3D-дизайна может помочь вам в этом!
           </p>
           <p className="description">
-          С помощью 3D-программного обеспечения вы можете создавать реалистичные модели клиентов и экспериментировать с различными прическами, укладками и цветами виртуально. Это позволяет вам показать клиентам, как они будут выглядеть с разными вариантами причесок и подобрать оптимальный вариант.
+            С помощью 3D-программного обеспечения вы можете создавать
+            реалистичные модели клиентов и экспериментировать с различными
+            прическами, укладками и цветами виртуально. Это позволяет вам
+            показать клиентам, как они будут выглядеть с разными вариантами
+            причесок и подобрать оптимальный вариант.
           </p>
         </div>
       </div>
     </Section>
-  )
+  );
 }
 
 const Section = styled.section`
-min-height: 100vh;
+  min-height: 100vh;
   height: 140vh;
   background-color: var(--secondary-color);
-  
+
   .sideTitle {
     h1 {
       color: #fff;
@@ -133,7 +138,7 @@ min-height: 100vh;
               border-radius: 20px;
             }
             &::-webkit-progress-value {
-              background-color: white; 
+              background-color: white;
               border-radius: 20px;
             }
           }
@@ -153,7 +158,7 @@ min-height: 100vh;
       z-index: 2;
     }
   }
-  @media screen and (min-width: 280px) and (max-width: 1080px) { 
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
     overflow-x: hidden;
     padding: 2rem 0;
     .background {
@@ -199,4 +204,4 @@ min-height: 100vh;
     }
   }
 `;
-export default Skills
+export default Skills;

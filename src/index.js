@@ -4,14 +4,16 @@ import App from "./App";
 // import { BrowserRouter } from "react-router-dom";
 // import ProductContext from "./contexts/ProductContext";
 import { BrowserRouter } from "react-router-dom";
-import ProductContext from "./context/ProductContext";
+import ProductContext from "./contexts/ProductContext";
 // import ModelContext from "./context/model/ModelContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <ProductContext>
-      <App />
-    </ProductContext>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <ProductContext>
+        <App />
+      </ProductContext>
+    </BrowserRouter>
+  </React.StrictMode>
 );

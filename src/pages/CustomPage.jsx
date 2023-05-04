@@ -21,11 +21,10 @@ function CustomPage() {
   };
   return (
     <CustomizationProvider>
-      <div
-        className="App"
-        style={{ width: "500px", height: "700px", backgroundColor: "grey" }}>
+      <div style={{ width: "1200px", height: "700px" }} className="App">
         <Canvas
           //   style={{ background: "black", width: "300px" }}
+          style={{ width: "500px", height: "700px", backgroundColor: "grey" }}
           dpr={[1, 2]}
           shadows
           camera={{ fav: 45, position: [0, 0.1, 15] }}>
@@ -52,7 +51,8 @@ function CustomPage() {
           // display: "flex",
           flexDirection: "row",
           marginLeft: "670px",
-          marginTop: "-600px",
+          //   marginTop: "-600px",
+          //   marginBottom: "200px",
         }}>
         <Button onClick={() => handleButtonClick(<Futbolka />)}>
           Футболка

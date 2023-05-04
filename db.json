@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "name": "sweatshirt",
+      "image": "https://i.ibb.co/3pGdDB5/Screenshot-47.png",
+      "price": ""
+    },
+    {
+      "name": "dress",
+      "image": "https://i.yapx.ru/V9zSQ.png",
+      "id": 2,
+      "price": ""
+    },
+    {
+      "name": "hoodie",
+      "image": "https://i.yapx.ru/V9zSj.png",
+      "id": 3,
+      "price": ""
+    },
+    {
+      "name": "dfkjfdjkfdj",
+      "image": "dfjhdsfjhfds",
+      "price": "dfkhdfkhsd",
+      "id": 4
+    }
+  ]
+}
